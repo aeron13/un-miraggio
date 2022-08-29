@@ -1,0 +1,121 @@
+.ending-container {
+  display: flex;
+  background-color: #ffffff;
+  padding-left: 500px;
+	position: absolute;
+  top: 0;
+  padding-right: 500px;
+	width: fit-content;  
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+	background: rgb(255,247,235);
+	background: linear-gradient(90deg, rgba(255,247,235,1) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 100%);
+}
+
+/* flipboxes */
+
+.flipbox-container {
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-evenly;
+    align-content: center;
+  	max-width: 1000px;
+  	min-width: 800px;
+margin-right: 500px;
+}
+
+.ending-container h2 {
+  margin-left: 100px;
+  margin-right: 300px;
+  font-size: 1.5em;
+  font-family: EB Garamond;
+  color: #e8d1af;
+}
+
+.panel {
+	position: relative;
+  padding: 10px;
+  width: 33%;
+  max-width: 300px;
+	-webkit-perspective: 600px;
+	-moz-perspective: 600px;
+	text-align: center;
+}
+
+
+	
+.panel .front {
+	z-index: 900;
+	text-align: center;
+	-webkit-transform: rotateX(0deg) rotateY(0deg);
+	   -moz-transform: rotateX(0deg) rotateY(0deg);
+	-webkit-transform-style: preserve-3d;
+	   -moz-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	   -moz-backface-visibility: hidden;
+	-webkit-transition: all .4s ease-in-out;
+	   -moz-transition: all .4s ease-in-out;
+		-ms-transition: all .4s ease-in-out;
+		 -o-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+}
+
+.panel .back {
+    height: 100%;
+    width: 100%;
+    padding: 10px 20px 10px 0px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+	z-index: 1000;
+	-webkit-transform: rotateY(-180deg);
+	   -moz-transform: rotateY(-180deg);
+	-webkit-transform-style: preserve-3d;
+	   -moz-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	   -moz-backface-visibility: hidden;
+	-webkit-transition: all .4s ease-in-out;
+	   -moz-transition: all .4s ease-in-out;
+		-ms-transition: all .4s ease-in-out;
+		 -o-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+ 
+}
+.panel.flip .front {
+	z-index: 900;
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+}
+.panel.flip .back {
+	z-index: 1000;
+	-webkit-transform: rotateX(0deg) rotateY(0deg);
+	-moz-transform: rotateX(0deg) rotateY(0deg);
+}
+
+.box2 {
+    background-color: #fffefd;
+    height: 100%;
+    margin: auto;
+    padding: 10px 20px 5px 20px;
+    width: 100%;
+ 	  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.box2 p {
+    font-family: EB Garamond;
+    color: #eecc9a;
+  text-transform: uppercase;
+}
+
+.box2,
+.panel .front {
+   box-shadow: 1px 1px 3px rgb(58 56 64 / 21%);
+}
