@@ -8,7 +8,6 @@ let debounceResize;
 window.addEventListener("scroll", () => {
   let newProgressHeight = window.pageYOffset / totalPageHeight;
   progressBar.style.left = 'calc(' + (newProgressHeight) * 100 + '% - 10px)';
-  //progressBar.style.opacity = `${newProgressHeight}`;
 }, {
   capture: true,
   passive: true
@@ -24,9 +23,6 @@ window.addEventListener("resize", () => {
 progressBarContainer.addEventListener("click", (e) => {
   var scrollProportion = e.clientX
   let newPageScroll = e.clientX * totalPageHeight / progressBarContainer.offsetWidth;
-  // for vertical scrollbar:
-    // e.clientX : progressBarContainer.offsetWidth = newPageScroll : totalPageHeight
-		//  let newPageScroll = e.clientY / progressBarContainer.offsetHeight * totalPageHeight;
   window.scrollTo({
     top: newPageScroll
   });

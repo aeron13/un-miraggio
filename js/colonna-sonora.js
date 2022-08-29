@@ -41,8 +41,6 @@ function updateTimer() {
 // 2. -- Controlla la riproduzione degli audio
 
 // per ogni audio definire 3 array
-// var startPoints =  [0, 3,   4, 6.5, 7,   9,    10.5, 11.4, 13.2, 14,    15.6, 19.2, 22.5, 24.5];
-// var endingPoints = [3, 3.7, 6, 7,   8.5, 10.5, 11.3, 12.5, 13.9, 15.25, 18.5, 22, 24.3, 26];
 // - 1. la durata di ogni pezzo
 var durata =          [3.7, 0.7, 3, 0.5, 1.5, 1.5, 0.8, 1.1, 0.8, 1.25, 2.9,  2.8, 1.8, 1.5 ];
 // - 2. dopo quanto rispetto al pezzo precedente deve partire quello corrente
